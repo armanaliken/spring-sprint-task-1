@@ -26,12 +26,4 @@ public class dbManager {
         id++;
         itemList.add(item);
     }
-
-    public static Item getItemById(Long id){
-        return (Item) itemList.stream()
-                .filter(item -> Objects.equals(item.getId(), id))
-                .findFirst()
-                .orElse(null);
-
-    }
 }
